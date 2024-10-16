@@ -8,7 +8,7 @@ class Band(models.Model):
 
     class Genre(models.TextChoices):
         HIP_HOP = 'HH'
-        SYNTH_POP = 'sp'
+        SYNTH_POP = 'SP'
         ALTERNATIVE_ROCK = 'AR'
         
     name = models.fields.CharField(max_length=100)

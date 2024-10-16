@@ -1,10 +1,10 @@
 {% extends 'listings/base.html' %}
 
 {% block content %}
-    <h2> {{ title.name }}</h2>
+    <h2> {{ title.name }} </h2>
     <ul>
-        <li> description : {{ title.get_description_display}}</li>
-        <li> Année  : {{ title.year_formed}}</li>
+        <li> description : {{ title.description}}</li>
+        <li> Année  : {{ title.year}}</li>
         <li> sold : {{ title.sold|yesno}}</li>
     </ul>
 

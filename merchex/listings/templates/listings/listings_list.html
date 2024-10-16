@@ -2,12 +2,15 @@
 
 {% block content %}
 
-<h1>Hello Django</h1>
-    <p>Voici une liste d'annonce : ' </p>
+<h1>Hello MUSIC LOVERS</h1>
+<a href="{% url 'listing-create' %}">Créer une nouvelle annonce</a>
+    <p>Voici une liste d'annonce : </p>
     <ul>
         {% for title in titles %}
         <li>
-            <a href="{% url 'annonces-detail' title.id %}">{{ title.name }}</a>
+            <a href="{% url 'listing-detail' title.id %}">{{ title.name }}</a>
+            -<a href="{% url 'listing-update' title.id %}">[modifier]</a>
+            -<a href="{% url 'listing-delete' title.id %}">[supprimer]</a>
         </li>
         {% endfor %}
     </ul>
